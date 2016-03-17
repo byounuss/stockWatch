@@ -1,78 +1,45 @@
-This example project is based on few other projects:
+This project is based on below projects
 * [Cucumber-JVM-Parallel](https://github.com/tristanmccarthy/Cucumber-JVM-Parallel)
 * [java-parallel](https://github.com/cucumber/cucumber-jvm/tree/java-parallel-example/examples/java-parallel)
-* [java-webbit-websockets-selenium](https://github.com/cucumber/cucumber-jvm/tree/java-parallel-example/examples/java-webbit-websockets-selenium)
 
 It allows you to run Cucumber features (tests/scenarios) in multiple browsers simultaneously using Selenium (WebDriver) and TestNG.
 
 
 ## Running features in IDE
-Tested in IntelliJ Idea 13.1.1
+Tested in eclipse
 To run all stories from IDE only in Firefox, simply right click on one of the files:
 * cucumber.examples.java.testNG.runners.RunCukesTestInChrome
-* cucumber.examples.java.testNG.runners.RunCukesTestInFirefox
+
 
 And chose "Run ..."
-(Yes, choosing RunCukesTestInChrome will also run tests in FF!)
-
-
-To run all stories simultaneously in both browsers (Chrome and Firefox) right click on one of the files:
-* src/test/resources/TestNGRunTestsLocally.xml
-* src/test/resources/TestNGRunTestsRemotely.xml
-
-And chose "Run ..."
-
-To run just one selected feature, change the feature name in the class below:
-
-    cucumber.examples.java.testNG.runners.RunSingleFeature
-
-And as in previous example, right click on this class and chose "Run ..."
-
+(Yes, choosing RunCukesTestInChrome will also run tests in FF,Android and iOS!)
 
 ## Running features from CLI
 Run tests using local browsers:
 
     mvn clean install
 
-Run tests using browsers running on remote nodes:
+To run all stories simultaneously in all browsers (Chrome,Firefox,Android and iOS) right click on one of the files:
+* src/test/resources/TestNGRunTests.xml
 
-    mvn clean install -P runTestsRemotely
+And chose "Run as TestNG Suite..."
+
 
 
 ## Viewing the results
 All Cucumber reports [html, json, xml, js] are in: target/cucumber-report
 
+##Information 
+Path of different file related to this project
+feature file -> src/test/resources/features/ndsotckwatch.feature 
+runner file ->src/test/java/KB.stockWatch.java.testNG.runners
+Driver Manager,Listener and Factory -> src/test/java/KB.stockWatch.java.testNG
+PageObjects -> src/test/java/KB.stockWatch.java.testNG.pageObjects
+Glue Code  -> src/test/java/KB.stockWatch.java.testNG.stepDefinition
+Keywords -> src/test/java/KB.stockWatch.java.testNG.keywords
+TestNG XML file -> KB/stockWatch/src/test/resources/TestNGRunTests.xml 
 
-## How to download WebDriver binaries automatically
-This project is using Mark Collin's "selenium-standalone-server-plugin" which is a Maven plugin that can download
-WebDriver binaries automatically.
-Once you configure the plugin to your liking, then:
+Due to the release here in my company I was not concentrated much on the performance, it is taking lot of time to run the for loop 
+     while implementing Decscending order logic.
+     
 
-    mvn clean install -P downloadDriverBinaries
-
-The pom.xml is currently configured to download only a Chrome driver binary for 64bit Linux OSes.
-If you can't download desired driver binary, then check if its URL and checksum specified in:
-
-    src/main/resources/RepositoryMapForMavenWebDriverBinaryDownloaderPlugin.xml
-
-are correct. If not, then modify this file accordingly.
-
-
-## Jenkins configuration
-I'll add a tutorial later
-
-### tools that need to be installed on the Jenkins Host machine
-maven 2/3
-
-### List of useful plugins
-AnsiColor
-Cucumber json test reporting.
-cucumber-perf
-cucumber-reports
-GIT client plugin
-GIT plugin
-Hudson Locks and Latches plugin
-Maven Integration plugin
-SSH Credentials Plugin
-TestNG Results Plugin
-Xvfb plugin
