@@ -79,9 +79,9 @@ public class StockWatch {
 			Keywords.isElementPresent(SWObj.col_chng);
 			Keywords.isElementPresent(SWObj.col_open);
 			Keywords.isElementPresent(SWObj.col_Perchng);
-			log.info("Page loaded succefully");
+			log.info("All the columns are displayed properly");
 		} catch (Exception e) {
-			log.info("element ");
+			log.info("Issue in loading some of the columns");
 		}
 	}
 
@@ -111,7 +111,10 @@ public class StockWatch {
 			log.info("% Change is printed value is not matching");
 		}
 	}
-
+/*
+ * In the below Method 
+ * 
+ */
 	@And("^Verify Make sure that %Chng displayed in descending order$")
 	public void isPerntChangeInDescOrder() throws Throwable {
 		try {
@@ -155,8 +158,7 @@ public class StockWatch {
 			Assert.assertTrue(incrCount==advances);
 			Assert.assertTrue(decrCount==declines);
 			Assert.assertTrue(unChangeCount==unchnaged);
-//			Assert.assertTrue(incrCount+decrCount+unChangeCount==50);
-//			
+			Assert.assertTrue(incrCount+decrCount+unChangeCount==50);
 			log.info("Count Matches and total is ");
 		} catch (Exception e) {
 			log.info("Count doestNot match ");
