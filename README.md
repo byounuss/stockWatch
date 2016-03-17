@@ -31,13 +31,20 @@ All Cucumber reports [html, json, xml, js] are in: target/cucumber-report
 
 ##Information 
 Path of different file related to this project
-feature file -> src/test/resources/features/ndsotckwatch.feature 
-runner file ->src/test/java/KB.stockWatch.java.testNG.runners
-Driver Manager,Listener and Factory -> src/test/java/KB.stockWatch.java.testNG
-PageObjects -> src/test/java/KB.stockWatch.java.testNG.pageObjects
-Glue Code  -> src/test/java/KB.stockWatch.java.testNG.stepDefinition
-Keywords -> src/test/java/KB.stockWatch.java.testNG.keywords
-TestNG XML file -> KB/stockWatch/src/test/resources/TestNGRunTests.xml 
+feature file 
+        src/test/resources/features/ndsotckwatch.feature 
+runner file -
+        src/test/java/KB.stockWatch.java.testNG.runners
+Driver Manager,Listener and Factory -
+        src/test/java/KB.stockWatch.java.testNG
+PageObjects 
+        src/test/java/KB.stockWatch.java.testNG.pageObjects
+Glue Code  
+        src/test/java/KB.stockWatch.java.testNG.stepDefinition
+Keywords 
+        src/test/java/KB.stockWatch.java.testNG.keywords
+TestNG XML file 
+        KB/stockWatch/src/test/resources/TestNGRunTests.xml 
 
 Due to the release here in my company I was not concentrated much on the performance, it is taking lot of time to run the for loop 
      while implementing Decscending order logic.
