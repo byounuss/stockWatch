@@ -1,10 +1,20 @@
+
+
 This project is based on below projects
 * [Cucumber-JVM-Parallel](https://github.com/tristanmccarthy/Cucumber-JVM-Parallel)
 * [java-parallel](https://github.com/cucumber/cucumber-jvm/tree/java-parallel-example/examples/java-parallel)
 
 It allows you to run Cucumber features (tests/scenarios) in multiple browsers simultaneously using Selenium (WebDriver) and TestNG.
 
+Requirements :
+Java : 1.7
+Maven and set the path for M2_HOME and $M2_HOME in PATH so that can able to mvn from command prompt
 
+## Running features from CLI
+Run tests using local browsers:
+
+    mvn clean install
+    
 ## Running features in IDE
 Tested in eclipse
 To run all stories from IDE only in Firefox, simply right click on one of the files:
@@ -14,10 +24,7 @@ To run all stories from IDE only in Firefox, simply right click on one of the fi
 And chose "Run ..."
 (Yes, choosing RunCukesTestInChrome will also run tests in FF,Android and iOS!)
 
-## Running features from CLI
-Run tests using local browsers:
 
-    mvn clean install
 
 To run all stories simultaneously in all browsers (Chrome,Firefox,Android and iOS) right click on one of the files:
 * src/test/resources/TestNGRunTests.xml
