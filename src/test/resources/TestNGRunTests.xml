@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="run tests in parallel" parallel="tests" verbose="1" configfailurepolicy="continue" thread-count="2">
+    <listeners>
+        <!--
+        This TestNG listener takes care of setting up and tearing down the Local Selenium driver,
+        and it also changes test names in the final TestNG HTML report.
+        -->
+        <listener class-name="KB.stockWatch.java.testNG.WebDriverListener" />
+    </listeners>
+   
+    <test name="Tests in Chrome" >
+        <parameter name="browserName" value="chrome" />
+        <classes>
+            <class name="KB.stockWatch.java.testNG.runners.RunCukesTestInChrome"/>
+        </classes>
+    </test>
+</suite>
