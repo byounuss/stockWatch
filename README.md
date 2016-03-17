@@ -31,19 +31,19 @@ All Cucumber reports [html, json, xml, js] are in: target/cucumber-report
 
 ##Information 
 Path of different file related to this project
-feature file 
+feature file: 
      *      src/test/resources/features/ndsotckwatch.feature 
-runner file -
+runner file:
      *      src/test/java/KB.stockWatch.java.testNG.runners
 Driver Manager,Listener and Factory -
      *      src/test/java/KB.stockWatch.java.testNG
-PageObjects 
+PageObjects: 
      *      src/test/java/KB.stockWatch.java.testNG.pageObjects
-Glue Code  
+Glue Code:  
      *      src/test/java/KB.stockWatch.java.testNG.stepDefinition
-Keywords 
+Keywords: 
      *      src/test/java/KB.stockWatch.java.testNG.keywords
-TestNG XML file 
+TestNG XML file: 
      *      KB/stockWatch/src/test/resources/TestNGRunTests.xml 
 
 Due to the release here in my company I was not concentrated much on the performance, it is taking lot of time to run the for loop 
