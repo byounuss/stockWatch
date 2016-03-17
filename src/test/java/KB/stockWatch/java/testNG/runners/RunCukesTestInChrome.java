@@ -10,7 +10,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  * I'm using it to delete cookies and take a screenshot if scenario fails.
  */
 @CucumberOptions(
-        features = "target/test-classes/features/ndtvStockwatch",
+        features = "target/test-classes/features/niftyStockwatch",
         glue = {"KB.stockWatch.java.testNG.stepDefinitions"},
         format = {"pretty",
                 "html:target/cucumber-report/chrome",
