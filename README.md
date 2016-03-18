@@ -46,8 +46,3 @@ Path of different file related to this project :
 * src/test/java/KB.stockWatch.java.testNG.stepDefinition
 * src/test/java/KB.stockWatch.java.testNG.keywords
 * KB/stockWatch/src/test/resources/TestNGRunTests.xml 
-
-Due to the release here in my company I was not concentrated much on the performance, it is taking lot of time to run the for loop 
-     while implementing Decscending order logic.
-     
-
