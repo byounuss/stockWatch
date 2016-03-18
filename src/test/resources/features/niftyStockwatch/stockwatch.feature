@@ -9,7 +9,7 @@ Feature: Nifty top 50 stock list
     And Verify the Stocklsit page loaded properly
     Then Verify Open Chng and %Chng columns are present
     And Verify %Chng calculated curreclty
-    And Verify Make sure that %Chng displayed in descending order
-    And Verify that advances, declines and Unchanged count match exaclty and total count should be 50
+    And Verify Make sure that %Chng displayed in descending order1
+#    And Verify that advances, declines and Unchanged count match exaclty and total count should be 50
     
   
